@@ -1,0 +1,47 @@
+/* Basic CSS for the navigation bar */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color:rgb(1, 53, 36);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav h1{
+    font-family: Arial;
+    color:rgb(129, 103, 153);
+}
+body > h1 {
+    color:rgb(201, 190, 209);
+    font-family: "Bitcount Prop Single Ink", sans-serif;
+    text-align: right;
+    font-size: 7rem;
+}
+body > p {
+    color: rgb(245, 245, 245);
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight:700;
+}
+nav ul {
+    list-style-type: none;
+    /* padding: 0; */
+}
+nav ul li {
+    display:inline;
+    margin-right: 10px;
+}
+nav a {
+    text-decoration: none;
+    color:antiquewhite;
+    font-weight: bold;
+}
+
+body {
+    background-image: url("./imgs/bg-img.png");
+    }
+
