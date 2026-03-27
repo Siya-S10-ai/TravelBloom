@@ -1,4 +1,71 @@
 // Task 6: Recommendation Result
+// Step 1: Defining object and variables for XMLHttpRequest
 var xhr = new XMLHttpRequest();
 var url = './travel_recommendation_api.json';
-xhr.open("GET", travel_recommendation_api.json, true);
+// Step 2: Request setup
+// Prepare a GET request to the specified URL,
+// which we have saved in a variable url in asynchronous
+// mode within this file
+xhr.open("GET", url, true);
+/** The open method configures an XHR request with the
+ * following parameters:
+ * 'GET': Specifies the HTTP method used for the request 
+ (in this case, a GET request).
+ * URL: Represents the URL from where you will fetch the data.
+ * True: Indicates if the request is asynchronous (true) or
+ synchronous (false). In this case, it's set to true for
+ asynchronous operation, allowing other scripts to run while
+ the request is processed. */
+
+// Step 3: Response type specification
+// In this step, we need to inform the XMLHttpRequest object
+// that the expected response from the server should be in
+// JSON format.
+xhr.responseType = "json";
+
+// Step 4: Handling the 'onload' event
+xhr.onload = function() {
+    var countries = xhr.response.countries;
+    var countriesDiv = document.getElementById("countries");
+    /**var countries = xhr.response.countries; This line extracts the
+ * countries array from the JSON response received from the
+ * server. The xhr.response contains the parsed JSON data,
+ * and .countries accesses the specific property containing
+ * the array of countries. 
+ * var countriesDiv = xhr.response.countries; This line retrieves
+ * the HTML element with the ID 'countries' where the fetched
+ * content will be displayed. */
+
+    // Step 5: Iterating through the countries array and displaying the data
+    countries.forEach(function(country) {
+        country.cities.forEach(function(city) {
+            // Create HTML element dynamically, for example,
+            // <div>, <img>, <h3>, <p> etc.,
+            // for each country's name, image, and description
+            // using createElement DOM method:
+            var countryDiv = document.createElement("div");
+            countryDiv.classList.add("recommendation");
+            // Populate these HTML elements with corresponding content
+            // from the fetched JSON data:
+            var img = document.createElement("img");
+            img.src = city.imageUrl;
+
+            var name = document.createElement("h3");
+            name.textContent = city.name;
+
+            var description = document.createElement("p");
+            description.textContent = city.description;
+
+            // Attach these elements to the countryDiv to displau
+            // each country's information on the webpage
+            countryDiv.appendChild(img);
+            countryDiv.appendChild(name);
+            countryDiv.appendChild(description);
+
+            countriesDiv.appendChild(countryDiv);
+        });
+    })
+}
+// We need to send the XMLHttpRequest to fetch the data from
+// the specified URL
+xhr.send();
