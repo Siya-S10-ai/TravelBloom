@@ -69,3 +69,34 @@ xhr.onload = function() {
 // We need to send the XMLHttpRequest to fetch the data from
 // the specified URL
 xhr.send();
+
+// Function to clear search text when user clicks the clear button
+function clearSearch() {
+    document.getElementById("searchInput").value = "";
+}
+
+// Function to search for a recommendation within our json
+function showTravelRecommendation() {
+    var searchInput = document.getElementById("searchInput").value
+        .toLowerCase()
+        .trim();
+    
+    // Get all recommendation elements
+    var recommendations = document.querySelectorAll(".recommendation");
+
+    recommendations.forEach(function(recommendation) {
+        var cityName = recommendation.querySelector("h3").textContent
+            .toLowerCase();
+        var cityDescription = recommendation.querySelector("p").textContent
+            .toLowerCase();
+
+        // Check if the search input matches either the city name or description
+        if (cityName.includes(searchInput) || cityDescription.includes(searchInput)) {
+            // If there's a match, display the recommendation
+            recommendation.style.display = "block";
+        } else {
+            // If no match, hide the recommendation
+            recommendation.style.display = "none";
+        }
+    });
+}
