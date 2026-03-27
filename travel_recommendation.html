@@ -18,15 +18,15 @@
         <ul>
             <li><a href="about_us.html" id="about">About Us</a></li>
             <li><a href="contact_us.html" id="contact">Contact Us</a></li>
-            <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword"></li>
-            <li><button id="btnSearch">Search</button></li>
-            <li><button id="btnClear">Clear</button></li>
+            <li><input type="text" id="searchInput" placeholder="Enter a destination or keyword"></li>
+            <li><button type="submit" id="btnSearch" onclick="showTravelRecommendation()">Search</button></li>
+            <li><button id="clear" onclick="clearSearch()">Clear</button></li>
         </ul>
         </nav>
         <h1>Explore Dream Destination</h1>
         <p>The Travel Recommendation App helps users explore popular travel destinations</p>
         <p>through an interactive and user friendly interface. It allows users to search</p>
-        <p>beaches, temples, countries, or specific country names to view related cities along</p>p>
+        <p>beaches, temples, countries, or specific country names to view related cities along</p>
         <p>with images and descriptions. The app dynamically fetches data from a structured</p>
         <p>JSON file to display relevant results. It provides a simple and efficient way to</p>
          <p>discover and plan travel destinations.</p>
@@ -43,7 +43,7 @@
         <div class="hh2">
             <h2>Recommendations</h2>
         </div>
-         
+         <div id="destination" class="all_recommendations"></div>
     <div id="countries" class="all_recommendations"></div>
     <script src="travel_recommendation.js"></script>
 </body>
