@@ -167,6 +167,12 @@ input[type=submit] {
   }
 }
 
+.hh2{
+  color: white;
+  text-align: center;
+  font-size: 130%;
+}
+
 /* Recommendations */
 
 .all_recommendations {
@@ -174,9 +180,10 @@ input[type=submit] {
   flex-direction: row;
   flex-flow: row wrap;
   gap: 20px;
-  /* justify-content: center; */
+  justify-content: center;
   color: white;
 }
+
 
 .recommendation {
   border: 1px solid gray;
@@ -211,6 +218,7 @@ input[type=submit] {
   color: gray;
   margin-block-start: 5px;
   margin-block-end: 5px;
+  color: white;
 } 
 
 .flex_center {
