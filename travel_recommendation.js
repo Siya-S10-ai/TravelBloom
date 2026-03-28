@@ -64,7 +64,49 @@ xhr.onload = function() {
 
             countriesDiv.appendChild(countryDiv);
         });
-    })
+    });
+    var beaches = xhr.response.beaches;
+    var beachesDiv = document.getElementById("beaches");
+
+    beaches.forEach(function(beach) {
+        var beachDiv = document.createElement("div");
+        beachDiv.classList.add("recommendation");
+
+        var img = document.createElement("img");
+        img.src = beach.imageUrl;
+
+        var name = document.createElement("h3");
+        name.textContent = beach.name;
+
+        var description = document.createElement("p");
+        description.textContent = beach.description;
+
+        beachDiv.appendChild(img);
+        beachDiv.appendChild(name);
+        beachDiv.appendChild(description);
+        beachesDiv.appendChild(beachDiv);
+    });
+    var temples = xhr.response.temples;
+    var templesDiv = document.getElementById("temples");
+
+    temples.forEach(function(temple) {
+        var templeDiv = document.createElement("div");
+        templeDiv.classList.add("recommendation");
+
+        var img = document.createElement("img");
+        img.src = temple.imageUrl;
+
+        var name = document.createElement("h3");
+        name.textContent = temple.name;
+
+        var description = document.createElement("p");
+        description.textContent = temple.description;
+
+        templeDiv.appendChild(img);
+        templeDiv.appendChild(name);
+        templeDiv.appendChild(description);
+        templesDiv.appendChild(templeDiv);
+    });
 }
 // We need to send the XMLHttpRequest to fetch the data from
 // the specified URL
