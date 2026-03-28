@@ -7,12 +7,12 @@
           {
             "name": "Sydney, Australia",
             "imageUrl": "./imgs/travel_imgs/sydney.jpg",
-            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+            "description": "The country's vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
           },
           {
             "name": "Melbourne, Australia",
             "imageUrl": "./imgs/travel_imgs/melbourne.jpeg",
-            "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+            "description": "A cultural country hub famous for its art, food, and diverse neighborhoods."
           }
         ]
       },
@@ -23,12 +23,12 @@
           {
             "name": "Tokyo, Japan",
             "imageUrl": "./imgs/travel_imgs/tokyo.jpeg",
-            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and country rich culture."
           },
           {
             "name": "Kyoto, Japan",
             "imageUrl": "./imgs/travel_imgs/kyoto.jpeg",
-            "description": "Known for its historic temples, gardens, and traditional tea houses."
+            "description": "Known for its historic gardens, and traditional tea houses. City within a country."
           }
         ]
       },
@@ -39,12 +39,12 @@
           {
             "name": "Rio de Janeiro, Brazil",
             "imageUrl": "./imgs/travel_imgs/rio.jpeg",
-            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+            "description": "A lively city known for its stunning ocean views, vibrant carnival celebrations, and iconic landmarks to its country."
           },
           {
             "name": "São Paulo, Brazil",
             "imageUrl": "./imgs/travel_imgs/sao.jpeg",
-            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife. Compliment's the country."
           }
         ]
       }
@@ -52,13 +52,13 @@
     "temples": [
       {
         "id": 1,
-        "name": "Angkor Wat, Cambodia",
+        "name": "Angkor Wat Temple, Cambodia",
         "imageUrl": "./imgs/travel_imgs/angkor.jpeg",
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
       },
       {
         "id": 2,
-        "name": "Taj Mahal, India",
+        "name": "Taj Mahal Temple, India",
         "imageUrl": "./imgs/travel_imgs/taj.jpeg",
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
       }
@@ -66,14 +66,14 @@
     "beaches": [
       {
         "id": 1,
-        "name": "Bora Bora, French Polynesia",
-        "imageUrl": "./imgs/travel_imgs/bora.jpeg",
+        "name": "Bora Bora Beach, French Polynesia",
+        "imageUrl": "./imgs/travel_imgs/bora_beach.jpeg",
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
       },
       {
         "id": 2,
         "name": "Copacabana Beach, Brazil",
-        "imageUrl": "./imgs/travel_imgs/copacabana.jpeg",
+        "imageUrl": "./imgs/travel_imgs/copacabana_beach.jpeg",
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
       }
     ]
